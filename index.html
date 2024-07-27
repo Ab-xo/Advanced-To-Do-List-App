@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List-App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <div class="header-row">
+                <h2>To-Do List<img src="images/icon.png" alt=""></h2>
+                <div class="search-filter-container">
+                    <input type="text" id="search-box" placeholder="Search tasks">
+                    <button id="search-button" onclick="searchTasks()">Search</button>
+                    <select id="filter-selector" onchange="filterTasks()">
+                        <option value="all">All</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <button id="dark-mode-toggle" onclick="toggleDarkMode()">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+            </div>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your tasks">
+                <select id="priority-selector">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <input type="date" id="due-date">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
